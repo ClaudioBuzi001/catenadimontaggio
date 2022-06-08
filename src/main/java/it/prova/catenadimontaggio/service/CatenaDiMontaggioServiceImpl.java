@@ -23,6 +23,8 @@ public class CatenaDiMontaggioServiceImpl implements CatenaDiMontaggioService {
 	@Autowired
 	private CarrozzeriaService carrozzeriaServiceImpl;
 //	ProvaSuStradaService 
+	@Autowired
+	private ProvaSuStradaService provaSuStradaService;
 //
 //	
 	
