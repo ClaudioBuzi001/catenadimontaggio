@@ -12,7 +12,7 @@ public class CatenaDiMontaggioServiceImpl implements CatenaDiMontaggioService {
 
 //	//TelaioService
 	@Autowired
-	private TelaioService talioService;
+	private TelaioService talaioService;
 //	MotoreService
 	@Autowired
 	private MotoreService motoreService;
@@ -21,7 +21,7 @@ public class CatenaDiMontaggioServiceImpl implements CatenaDiMontaggioService {
 	private ImpiantoElettricoService impiantoElettricoService;
 //	CarrozzeriaService
 	@Autowired
-	private CarrozzeriaService carrozzeriaServiceImpl;
+	private CarrozzeriaService carrozzeriaService;
 //	ProvaSuStradaService 
 	@Autowired
 	private ProvaSuStradaService provaSuStradaService;
@@ -33,8 +33,22 @@ public class CatenaDiMontaggioServiceImpl implements CatenaDiMontaggioService {
 	SlotCatenaDiMontaggioDAO catenaDiMontaggioDAO;
 
 	@Override
-	public void creaAuto() {
-		// TODO Auto-generated method stub
+	public void creaAuto(SlotCatenaDiMontaggio catenaMontaggio) {
+		System.out.println("Inizio CatenaDiMontaggio");
+		System.out.println("____________________________________________");
+		for(Automobile automobileItem : catenaMontaggio.getAutomobilili()) {
+			System.out.println("Inizio Creazione Automobile: "+ automobileItem.getModello());
+			
+			talaioService.montaTelaio();
+			motoreService.montaMotore();
+			impiantoElettricoService.installaImpiantoElettrico();
+			carrozzeriaService.montaCarrozzeria();
+			provaSuStradaService.tuttoGas();
+			
+			System.out.println("Creazione Auto Completata!");
+		}
+		System.out.println("________________________________");
+		System.out.println("Fine Catena Di montaggio");
 
 	}
 

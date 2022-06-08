@@ -5,7 +5,7 @@ import it.prova.catenadimontaggio.model.SlotCatenaDiMontaggio;
 
 public interface CatenaDiMontaggioService {
 	
-	public void creaAuto();
+	public void creaAuto(SlotCatenaDiMontaggio catenaDiMontaggio);
 	
 	public SlotCatenaDiMontaggio carica(Long id);
 	
