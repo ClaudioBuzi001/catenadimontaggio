@@ -20,9 +20,9 @@ public class DBMock {
 		catena1.addToAutomobili(autoFerrari2);
 
 		SlotCatenaDiMontaggio catena2 = new SlotCatenaDiMontaggio(2L, "Lamborghini", "Svezia");
-		Automobile autoLamborghini = new Automobile(3L, "Huracan", "aadcva", null);
+		Automobile autoLamborghini = new Automobile(4L, "Huracan", "aadcva", null);
 		catena2.addToAutomobili(autoLamborghini);
-		Automobile autoLambo = new Automobile(4L, "Gallardo", "abfbs", null);
+		Automobile autoLambo = new Automobile(5L, "Gallardo", "abfbs", null);
 		catena2.addToAutomobili(autoLambo);
 		
 		//Aggiungo le catene alla lista
