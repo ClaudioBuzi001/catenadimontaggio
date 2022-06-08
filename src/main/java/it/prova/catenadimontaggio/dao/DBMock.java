@@ -8,6 +8,8 @@ import it.prova.catenadimontaggio.model.SlotCatenaDiMontaggio;
 
 public class DBMock {
 	public static final List<SlotCatenaDiMontaggio> CATENEDIMONTAGGIO = new ArrayList<SlotCatenaDiMontaggio>();
+	public static final List<Automobile> AUTOMOBILI= new ArrayList<Automobile>();
+
 
 	static {
 
@@ -22,7 +24,16 @@ public class DBMock {
 		catena2.addToAutomobili(autoLamborghini);
 		Automobile autoLambo = new Automobile(4L, "Gallardo", "abfbs", null);
 		catena2.addToAutomobili(autoLambo);
-
+		
+		//Aggiungo le catene alla lista
+		CATENEDIMONTAGGIO.add(catena1);
+		CATENEDIMONTAGGIO.add(catena2);
+		
+		//AGGIUNGO LE AUTO ALLA LISTA
+		AUTOMOBILI.add(autoFerrari);
+		AUTOMOBILI.add(autoFerrari2);
+		AUTOMOBILI.add(autoLamborghini);
+		AUTOMOBILI.add(autoLambo);
 	}
 
 }
